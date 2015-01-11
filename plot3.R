@@ -13,16 +13,12 @@ plot3 <- function(){
         legendc <- c("black","red","blue")
         
         png(file="plot3.png",height=480, width = 480)
-        #with(dat,plot(dat$DateTime,dat$Sub_metering_1,type="n",
-        #              xlab="",ylab="Energy metering",))
         plot(dat$DateTime,dat$Sub_metering_1,type="n",
                            xlab="",ylab="Energy metering",)
         lines(dat$DateTime,dat$Sub_metering_1,col="black")
         lines(dat$DateTime,dat$Sub_metering_2,col="red")
         lines(dat$DateTime,dat$Sub_metering_3,col="blue")
-        #with(dat,lines(dat$DateTime,dat$Sub_metering_1,col="black"))
-        #with(dat,lines(dat$DateTime,dat$Sub_metering_2,col="red"))
-        #with(dat,lines(dat$DateTime,dat$Sub_metering_3,col="blue"))
+       
         legend("topright",col =legendc,legend =legendl,lty=1,
                bg = "transparent", box.col = "black",cex = 0.8 )
         dev.off()
